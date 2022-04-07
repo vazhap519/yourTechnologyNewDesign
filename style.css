@@ -1,0 +1,168 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url('./assets/fonts/popins/Poppins-Black.ttf');
+    font-family: 'Poppins-BlackItalic';
+    src: url('./assets/fonts/popins/Poppins-BlackItalic.ttf');
+    font-family: 'Poppins-Bold';
+    src: url('./assets/fonts/popins/Poppins-Bold.ttf');
+    font-family: 'Poppins-BoldItalic';
+    src: url('./assets/fonts/popins/Poppins-BoldItalic.ttf');
+
+    font-family: 'Poppins-ExtraBold';
+    src: url('./assets/fonts/popins/Poppins-ExtraBold.ttf');
+    font-family: 'Poppins-ExtraBoldItalic';
+    src: url('./assets/fonts/popins/Poppins-ExtraBoldItalic.ttf');
+    font-family: 'Poppins-ExtraLight';
+    src: url('./assets/fonts/popins/Poppins-ExtraLight.ttf');
+    font-family: 'Poppins-ExtraLightItalic';
+    src: url('./assets/fonts/popins/Poppins-ExtraLightItalic.ttf');
+    font-family: 'Poppins-Italic';
+    src: url('./assets/fonts/popins/Poppins-Italic.ttf');
+    font-family: 'Poppins-Light';
+    src: url('./assets/fonts/popins/Poppins-Light.ttf');
+    font-family: 'Poppins-LightItalic';
+    src: url('./assets/fonts/popins/Poppins-LightItalic.ttf');
+    font-family: 'Poppins-Regular';
+    src: url('./assets/fonts/popins/Poppins-Regular.ttf');
+
+}
+#wrapper{
+    background-color: black;
+    position: relative;
+width: 100%;
+height: 1617px;
+background: linear-gradient(180deg, rgba(133, 51, 255, 0.85) 24.48%, rgba(96, 185, 185, 0) 100%);
+}
+
+#header{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.6) 100%);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+    
+}
+.logoArea{
+    display: inline-block;
+    margin-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar{
+    display: flex;
+}
+.navbar ul.navbar_ul{
+    display: flex;
+    color: #fff;
+list-style: none;
+margin-left: 235px;
+}
+.navbar ul.navbar_ul li{
+    margin-left: 25px;
+padding-top: 10px;
+}
+.navbar ul.navbar_ul li:active{
+    background: linear-gradient(180deg, rgba(133, 51, 255, 0.8) 0%, rgba(133, 51, 255, 0) 100%);
+}
+.navbar ul.navbar_ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: capitalize;
+    line-height: 37.5px;
+    color: #fff;
+    font-family: 'Poppins-Regular';
+    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.userArea{
+    list-style: none;
+    display: flex;
+
+}
+.userArea .regLog_user{
+    position: relative;
+    left: 25px;
+    top: 15px;
+}
+.userArea .regLog_user .user_ico{
+background-image: url('./assets/images/Login.png');
+width: 30px;
+height: 30px;
+position: absolute;
+}
+
+.userArea .regLog_user .user_ico:active{
+    background-image: url('./assets/images/Login_active.png');
+}
+.regLog_user form{
+    display: flex;
+  height: 225px;
+  top: 70px;
+  left: -310px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  width: 550px;
+  font-family: 'Poppins-Regular';
+}
+
+.user_inputs{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-top: 24px;
+    padding-bottom: 24px;
+    
+
+}
+.user_inputs label{
+    margin-top: 6px;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.user_inputs input{
+    margin-top: 6px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    background: #DEDEDE;
+border-radius: 5px;
+border: none;
+}
+.user_inputs input::placeholder{
+    padding-left: 18px!important;
+    padding-top: 10px;
+}
+
+.u_acaunt{
+    list-style: none;
+    margin-top: 30px;
+    margin-left: 24px;
+
+}
+.u_acaunt li{
+    margin-top: 45px;
+    background: #A889F2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+.u_acaunt li a{
+    padding: 6px 22px 6px 22px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Poppins-Regular';
+    text-transform: capitalize;
+    color: #fff;
+}
