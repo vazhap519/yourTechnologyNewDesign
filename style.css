@@ -104,8 +104,11 @@ position: absolute;
 .userArea .regLog_user .user_ico:active{
     background-image: url('./assets/images/Login_active.png');
 }
-.regLog_user form{
-    display: flex;
+ .user_ico:active +.regLog_user_form{
+    display:flex;
+}
+.regLog_user_form{
+    display: none;
   height: 225px;
   top: 70px;
   left: -310px;
@@ -114,6 +117,8 @@ position: absolute;
   border-radius: 25px;
   width: 550px;
   font-family: 'Poppins-Regular';
+  z-index: 10;
+  box-shadow:5px 5px #A889F2;
 }
 
 .user_inputs{
