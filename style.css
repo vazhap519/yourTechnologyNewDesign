@@ -83,12 +83,12 @@ position: absolute;
 .userArea .regLog_user .user_ico:active{
     background-image: url('./assets/images/Login_active.png');
 }
- .user_ico:active +.regLog_user_form{
+ /* .user_ico:active +.regLog_user_form{
     display:flex;
-}
+} */
 .regLog_user_form{
     display: none;
-  height: 225px;
+  height: auto;
   top: 70px;
   left: -310px;
   position: absolute;
@@ -102,8 +102,7 @@ position: absolute;
 
 .user_inputs{
     width: 350px;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
     margin-left: 24px;
     margin-top: 24px;
     padding-bottom: 24px;
@@ -134,21 +133,27 @@ border: none;
     list-style: none;
     margin-top: 30px;
     margin-left: 24px;
-
+    height: auto;
+display: inline-block;
 }
 .u_acaunt li{
     margin-top: 45px;
     background: #A889F2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
+    width: 140px;
+    height: 50px;
 }
 .u_acaunt li a{
-    padding: 6px 22px 6px 22px;
+    padding-left:22px;
+    padding-right:22px;
+    padding-top: 6px;
     text-decoration: none;
     font-size: 25px;
     font-family: 'Poppins-Regular';
     text-transform: capitalize;
     color: #fff;
+    display: block;
 }
 
 .shopingCartArea{
@@ -161,7 +166,66 @@ border: none;
     width: 30px;
     height: 30px;
     position: absolute;
-    background-image: url(./assets/images/cart.png);
+    background-image: url('./assets/images/cart.png');
     left: 65px;
     top: 15px;
+}
+.cart_icon:active {
+    background-image: url('./assets/images/cart_active.png');
+}
+
+.shopingCartArea_box {
+    width: 550px;
+    height: 225px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    position: absolute;
+    top: 70px;
+    left: -315px;
+    list-style: none;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+
+
+}.shopingCartArea_box h3{
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
+    margin-top: 24px;
+    margin-left: 24px;
+    border-bottom: 1px solid;
+    margin-right: 24px;
+}
+
+.searchArea{
+    position: relative;
+    width: 280px;
+    height: 30px;
+    left: 145px;
+    top: 8px;
+display: flex;
+justify-content: space-between;
+}
+
+.searhBox{
+    background: linear-gradient(135deg, #FCF9FF 0%, rgba(176, 153, 250, 0.65) 100%);
+border-radius: 20px;
+width: 250px;
+height: 40px;
+display: none;
+}
+.search_btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url(./assets/images/search.png);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    border: none;
+    top: 8px;
+    background-color: transparent;
+    right: -10px;
 }
