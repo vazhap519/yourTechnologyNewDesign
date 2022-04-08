@@ -4,28 +4,7 @@
     box-sizing: border-box;
 }
 @font-face {
-    font-family: 'Poppins-Black';
-    src: url('./assets/fonts/popins/Poppins-Black.ttf');
-    font-family: 'Poppins-BlackItalic';
-    src: url('./assets/fonts/popins/Poppins-BlackItalic.ttf');
-    font-family: 'Poppins-Bold';
-    src: url('./assets/fonts/popins/Poppins-Bold.ttf');
-    font-family: 'Poppins-BoldItalic';
-    src: url('./assets/fonts/popins/Poppins-BoldItalic.ttf');
-
-    font-family: 'Poppins-ExtraBold';
-    src: url('./assets/fonts/popins/Poppins-ExtraBold.ttf');
-    font-family: 'Poppins-ExtraBoldItalic';
-    src: url('./assets/fonts/popins/Poppins-ExtraBoldItalic.ttf');
-    font-family: 'Poppins-ExtraLight';
-    src: url('./assets/fonts/popins/Poppins-ExtraLight.ttf');
-    font-family: 'Poppins-ExtraLightItalic';
-    src: url('./assets/fonts/popins/Poppins-ExtraLightItalic.ttf');
-    font-family: 'Poppins-Italic';
-    src: url('./assets/fonts/popins/Poppins-Italic.ttf');
-    font-family: 'Poppins-Light';
-    src: url('./assets/fonts/popins/Poppins-Light.ttf');
-    font-family: 'Poppins-LightItalic';
+ 
     src: url('./assets/fonts/popins/Poppins-LightItalic.ttf');
     font-family: 'Poppins-Regular';
     src: url('./assets/fonts/popins/Poppins-Regular.ttf');
@@ -170,4 +149,19 @@ border: none;
     font-family: 'Poppins-Regular';
     text-transform: capitalize;
     color: #fff;
+}
+
+.shopingCartArea{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.cart_icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url(./assets/images/cart.png);
+    left: 65px;
+    top: 15px;
 }
