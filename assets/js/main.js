@@ -7,4 +7,10 @@ $(".user_ico").click(function(e){
 $('.search_btn').click(function(){
     $('.searhBox').show(1000)
 })
+
+$('.cart_icon').click(function(){
+    $('.shopingCartArea_box').show(1000)
+})
+
 });
+

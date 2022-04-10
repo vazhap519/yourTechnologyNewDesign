@@ -183,21 +183,123 @@ display: inline-block;
     top: 70px;
     left: -315px;
     list-style: none;
-    overflow: auto;
     display: none;
-    flex-direction: column;
+overflow: auto;
 
+}
+.shopingCartArea_box::-webkit-scrollbar-track{
+  border-radius: 5px;
+  background-color: aqua;
+  width: 50px;
+}
 
-}.shopingCartArea_box h3{
+  
+.shopingCartArea_box h3{
     font-family: 'Poppins-Regular';
     font-size: 20px;
     line-height: 30px;
     text-transform: capitalize;
-    margin-top: 24px;
-    margin-left: 24px;
-    border-bottom: 1px solid;
+    margin-top: 25px;
+    margin-left: 25px;
     margin-right: 24px;
+    margin-bottom: 5px;
+    display: block;
 }
+
+.shopingCartArea_box_item {
+    width: 495px;
+    margin-left: 25px;
+    height: auto;
+    /* background-color: orange; */
+    position: relative;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-top: 25px;
+
+}
+
+
+.shopingCartArea_box_item .shopingCartArea_box_item_img{
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    float: left;
+}
+
+.shopingCartArea_box_item_name{
+    width: 125px;
+    height: auto;
+    vertical-align: baseline;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Poppins-Regular';
+    font-style: normal;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.shopingCartArea_box_item_price{
+    background-color: #A889F2;
+    color: #fff;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    font-family: 'Poppins-Regular';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 22px;
+text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+
+.items_numbar_calc{
+    width: 80px;
+    height: 30px;
+    background-color: #A889F2;
+  display: inline-flex;
+  justify-content: space-around;
+  position: absolute;
+  right:  55px;
+  font-family: 'Poppins-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  color: #fff;
+}
+.items_numbar_calc_num{
+    width: 10px;
+    height: 30px;
+    text-align: center;
+padding-top: 5px;
+padding-bottom: 5px;
+
+
+}
+
+.items_numbar_calc_min{
+    padding-top: 5px;
+}
+.items_numbar_calc_plus{
+    padding-top: 5px;
+}
+
+
+.shopingCartArea_box_item_cart{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    top: 5px;
+}
+
 
 .searchArea{
     position: relative;
