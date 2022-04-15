@@ -14,32 +14,54 @@ $('.cart_icon').click(function(){
 
 });
 
+var fullsite=document.querySelector("#wrapper");
+var Colors=['red','green','blue'];
+
+
 
 var topCarousellLeftBtn=document.querySelector('.carousell_area_arrows_left')
 var topCarousellRighttn=document.querySelector('.carousell_area_arrows_right')
 var TopCarousellContent=document.querySelectorAll('.carousell_area_box ');
-var fullsite=document.querySelector("#wrapper");
+
 var TopCarousellCounter=0;
-function topCarousell(){
+function TopCarousellContentItems(){
     for(var i=0;i<TopCarousellContent.length;i++){
         TopCarousellContent[i].style.display="none"
-        
     }
+
+    for(var i in Colors){
+        fullsite.style.backgroundColor="orange"
+    }
+
 }
-topCarousellRighttn.addEventListener('click',TopCarousellChangeRight)
-function TopCarousellChangeRight(){
-    topCarousell()
-    if(TopCarousellCounter < TopCarousellContent.length-1){
-        TopCarousellCounter++
-       
-        TopCarousellContent[TopCarousellCounter].style.display="block"
-        fullsite.style.backgroundColor="red";
-    
-    }else{
+function topCarousellRighttn_f(){
+    TopCarousellContentItems()
+ 
+    TopCarousellCounter++
+    if(TopCarousellCounter>TopCarousellContent.length-1){
         TopCarousellCounter=0
-        TopCarousellContent[TopCarousellCounter].style.display="block"
-        fullsite.style.backgroundColor="yellow";
     }
-  
+    if(TopCarousellCounter>Colors.length-1){
+        TopCarousellCounter=0
+    }
+    fullsite.style.backgroundColor=Colors[TopCarousellCounter];
+    TopCarousellContent[TopCarousellCounter].style.display="block";
 }
+topCarousellRighttn.addEventListener('click',topCarousellRighttn_f)
+
+
+topCarousellLeftBtn.addEventListener('click',()=>{
+    TopCarousellContentItems()
+    TopCarousellCounter--
+    if(TopCarousellCounter<=TopCarousellContent.length-1){
+        TopCarousellCounter=0
+    }
+
+    if(TopCarousellCounter>Colors.length-1){
+        TopCarousellCounter=0
+    }
+    fullsite.style.backgroundColor=Colors[TopCarousellCounter];
+    TopCarousellContent[TopCarousellCounter].style.display="block";
+})
+
 
