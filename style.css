@@ -492,12 +492,21 @@ position: relative;
 
 }
 
+h2.carousell_area_box_title{
+background: linear-gradient(45deg, black, transparent);
+padding: 10px;
+text-transform: uppercase;
+}
 .carousell_area .carousell_area_box{
     position: absolute;
     width: 100%;
-    
+    display: none;
     height: 405px;
     max-height: 100%;
+    
+}
+.carousell_area_box_active{
+    display: block!important;
     
 }
 .carousell_area .carousell_area_box >img{
@@ -508,6 +517,25 @@ position: relative;
     /* position: absolute; */
 }
 
+h2.carousell_area_box_title{
+    background: linear-gradient(45deg, black, transparent);
+    padding: 10px;
+    text-transform: uppercase;
+    display: none;
+    }
+
+    .carousell_area_box:hover .carousell_area_box_title{
+        transition-duration: 0.5ms;
+        transition: all;
+        display: block;
+    }
+.carousell_area_box_title a{
+    font-family: 'Vermin';
+    font-size: 18px;
+    color: #ccc;
+    text-decoration: none;
+    font-style: italic;
+}
 .carousell_area_arrows{
     position: relative;
     width: 390px;

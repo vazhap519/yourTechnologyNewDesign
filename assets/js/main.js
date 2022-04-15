@@ -15,7 +15,7 @@ $('.cart_icon').click(function(){
 });
 
 var fullsite=document.querySelector("#wrapper");
-var Colors=['red','green','blue'];
+var Colors=['linear-gradient(180deg, rgba(133, 51, 255, 0.85) 24.48%, rgba(96, 185, 185, 0) 100%)','blue'];
 
 
 
@@ -26,11 +26,11 @@ var TopCarousellContent=document.querySelectorAll('.carousell_area_box ');
 var TopCarousellCounter=0;
 function TopCarousellContentItems(){
     for(var i=0;i<TopCarousellContent.length;i++){
-        TopCarousellContent[i].style.display="none"
+        TopCarousellContent[i].classList.remove('carousell_area_box_active')
     }
 
     for(var i in Colors){
-        fullsite.style.backgroundColor="orange"
+        fullsite.style.backgroundColor='linear-gradient(180deg, rgba(133, 51, 255, 0.85) 24.48%, rgba(96, 185, 185, 0) 100%)'
     }
 
 }
@@ -45,7 +45,7 @@ function topCarousellRighttn_f(){
         TopCarousellCounter=0
     }
     fullsite.style.backgroundColor=Colors[TopCarousellCounter];
-    TopCarousellContent[TopCarousellCounter].style.display="block";
+    TopCarousellContent[TopCarousellCounter].classList.add('carousell_area_box_active')
 }
 topCarousellRighttn.addEventListener('click',topCarousellRighttn_f)
 
@@ -61,7 +61,11 @@ topCarousellLeftBtn.addEventListener('click',()=>{
         TopCarousellCounter=0
     }
     fullsite.style.backgroundColor=Colors[TopCarousellCounter];
-    TopCarousellContent[TopCarousellCounter].style.display="block";
+    TopCarousellContent[TopCarousellCounter].classList.add('carousell_area_box_active')
 })
 
 
+var TopAuto=setInterval(TopCarousellAutoplay,1000)
+function TopCarousellAutoplay(){
+    topCarousellRighttn_f()
+}
