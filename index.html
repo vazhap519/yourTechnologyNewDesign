@@ -55,7 +55,7 @@
                             <span class="items_numbar_calc_num">0</span>
                             <span class="items_numbar_calc_plus">+</span>
                         </div>
-                        <img class="shopingCartArea_box_item_cart" src="./assets/images/cart_1.png" alt="">
+                        <san class="shopingCartArea_box_item_cart_x" ><i class="fa-solid fa-xmark"></i></san>
                     </li>
                     <li class="shopingCartArea_box_item">
                         <img src="./assets/images/product_images/video_card.png" alt="" class="shopingCartArea_box_item_img">
@@ -66,31 +66,50 @@
                             <span class="items_numbar_calc_num">0</span>
                             <span class="items_numbar_calc_plus">+</span>
                         </div>
-                        <img class="shopingCartArea_box_item_cart" src="./assets/images/cart_1.png" alt="">
+                        <san class="shopingCartArea_box_item_cart_x" ><i class="fa-solid fa-xmark"></i></san>
+                    </li>
+                    <li class="shopingCartArea_box_item">
+                        <img src="./assets/images/product_images/video_card.png" alt="" class="shopingCartArea_box_item_img">
+                        <span class="shopingCartArea_box_item_name">RTX 3090 Ti Price </span>
+                        <span class="shopingCartArea_box_item_price">999</span>
+                        <div class="items_numbar_calc">
+                            <span class="items_numbar_calc_min">-</span>
+                            <span class="items_numbar_calc_num">0</span>
+                            <span class="items_numbar_calc_plus">+</span>
+                        </div>
+                        <san class="shopingCartArea_box_item_cart_x" ><i class="fa-solid fa-xmark"></i></san>
+                    </li>
+                    <li class="shopingCartArea_box_item">
+                        <img src="./assets/images/product_images/video_card.png" alt="" class="shopingCartArea_box_item_img">
+                        <span class="shopingCartArea_box_item_name">RTX 3090 Ti Price </span>
+                        <span class="shopingCartArea_box_item_price">999</span>
+                        <div class="items_numbar_calc">
+                            <span class="items_numbar_calc_min">-</span>
+                            <span class="items_numbar_calc_num">0</span>
+                            <span class="items_numbar_calc_plus">+</span>
+                        </div>
+                        <san class="shopingCartArea_box_item_cart_x" ><i class="fa-solid fa-xmark"></i></san>
                     </li>
 
-                    <li class="shopingCartArea_box_item">
-                        <img src="./assets/images/product_images/video_card.png" alt="" class="shopingCartArea_box_item_img">
-                        <span class="shopingCartArea_box_item_name">RTX 3090 Ti Price </span>
-                        <span class="shopingCartArea_box_item_price">999</span>
-                        <div class="items_numbar_calc">
-                            <span class="items_numbar_calc_min">-</span>
-                            <span class="items_numbar_calc_num">0</span>
-                            <span class="items_numbar_calc_plus">+</span>
-                        </div>
-                        <img class="shopingCartArea_box_item_cart" src="./assets/images/cart_1.png" alt="">
-                    </li>
-                    <li class="shopingCartArea_box_item">
-                        <img src="./assets/images/product_images/video_card.png" alt="" class="shopingCartArea_box_item_img">
-                        <span class="shopingCartArea_box_item_name">RTX 3090 Ti Price </span>
-                        <span class="shopingCartArea_box_item_price">999</span>
-                        <div class="items_numbar_calc">
-                            <span class="items_numbar_calc_min">-</span>
-                            <span class="items_numbar_calc_num">0</span>
-                            <span class="items_numbar_calc_plus">+</span>
-                        </div>
-                        <img class="shopingCartArea_box_item_cart" src="./assets/images/cart_1.png" alt="">
-                    </li>
+
+
+
+
+
+
+
+
+                    <ul class="shopingCartArea_box_buttons">
+                        <li class="shopingCartArea_box_buttons_checkout">
+                            <a href="" class="shopingCartArea_box_buttons_checkout_link">checkout</a>
+                          </li>
+
+
+                        <li class="shopingCartArea_box_buttons_total">
+                            <span class="shopingCartArea_box_buttons_total_title">total</span>
+                              <span class="shopingCartArea_box_buttons_total_price">999</span>
+                        </li>
+                      </ul>
                 </ul>
             </li>
 
@@ -188,60 +207,9 @@
     </div>
 </footer>
 
-<!-- <script>
-    var fullsite=document.querySelector("#wrapper");
-    var topCarousellLeftBtn=document.querySelector('.carousell_area_arrows_left');
-    var topCarousellRighttn=document.querySelector('.carousell_area_arrows_right');
-    var TopCarousellContent=document.querySelectorAll('.carousell_area_box ');
-    var TopCarousellCounter=0;
-    
-    function TopCarousellContentItems(){
-        for(var i=0;i<TopCarousellContent.length;i++){
-            TopCarousellContent[i].classList.remove('carousell_area_box_active')
-            var newColor=TopCarousellContent[i].getAttribute('data-bgColor');
-            console.log(newColor)
-        }
-    
-    }
-    
-    function topCarousellRighttn_f(){
-        TopCarousellContentItems()
-     
-        TopCarousellCounter++
-        if(TopCarousellCounter>TopCarousellContent.length-1){
-            
-            TopCarousellCounter=0
-          
-        
-        }
-        var newColor=TopCarousellContent[TopCarousellCounter].getAttribute('data-bgColor');
-    
-         
-        fullsite.style.background=newColor;
-       
-        TopCarousellContent[TopCarousellCounter].classList.add('carousell_area_box_active')
-    }
-    
-    function topCarousellLeftBtn_f(){
-        TopCarousellContentItems()
-        TopCarousellCounter--
-        if(TopCarousellCounter<=TopCarousellContent.length-1){
-            TopCarousellCounter=0
-        }
-      
-        var newColor=TopCarousellContent[TopCarousellCounter].getAttribute('data-bgColor');
-        fullsite.style.background=newColor;
-        TopCarousellContent[TopCarousellCounter].classList.add('carousell_area_box_active')
-    }
-    
-    var TopAuto=setInterval(TopCarousellAutoplay,1000)
-    function TopCarousellAutoplay(){
-        topCarousellRighttn_f()
-    }
-    
-    </script>
-     -->
+
 <script src="./assets/js/carousell.js"></script>
+<script src="./assets/js/shop.js"></script>
     </div>
 </body>
 </html>
