@@ -5,7 +5,6 @@ var topCarousellRighttn=document.querySelector('.carousell_area_arrows_right');
 var TopCarousellContent=document.querySelectorAll('.carousell_area_box ')
 var TopCarousellCounter=0;
 if(TopCarousellContent && topCarousellLeftBtn && topCarousellRighttn && TopCarousellContent){
-    console.log('aris')
     function TopCarousellContentItems(){
         for(var i=0;i<TopCarousellContent.length;i++){
             TopCarousellContent[i].classList.remove('carousell_area_box_active')
@@ -46,3 +45,28 @@ if(TopCarousellContent && topCarousellLeftBtn && topCarousellRighttn && TopCarou
 
 }
 
+function RemoveCart(){
+    var remove=document.querySelectorAll('.shopingCartArea_box_item_cart_x');
+    for(var i=0;i< remove.length;i++){
+        var removeCartBtn=remove[i];
+        removeCartBtn.addEventListener('click',removeItem)
+
+    }
+ 
+}
+RemoveCart()
+function removeItem(event){
+    var removeItems=event.target;
+removeItems.parentElement.parentElement.remove()
+    
+}
+
+function updateTotal(){
+    let shopingArea=document.getElementsByClassName('shopingCartArea')[0];
+    let cartboxes=shopingArea.getElementsByClassName('shopingCartArea_box_item');
+    for(var i=0;i<cartboxes.length;i++){
+      var itemImage=cartboxes[i].getElementsByClassName('shopingCartArea_box_item_img')
+      var itemPrice=cartboxes[i].getElementsByClassName('shopingCartArea_box_item_price')
+      var itemQuantity=artboxes[i].getElementsByClassName('items_numbar_calc_num')
+    }
+}
