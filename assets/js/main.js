@@ -54,19 +54,13 @@ function RemoveCart(){
     }
  
 }
-RemoveCart()
-function removeItem(event){
-    var removeItems=event.target;
-removeItems.parentElement.parentElement.remove()
-    
-}
+var Plus=document.querySelector('.items_numbar_calc_plus');
+var Min=document.querySelector('.items_numbar_calc_min');
+var num=document.querySelector('.items_numbar_calc_num');
+var ParseNum=parseInt(num.textContent)
+console.log( typeof ParseNum)
 
-function updateTotal(){
-    let shopingArea=document.getElementsByClassName('shopingCartArea')[0];
-    let cartboxes=shopingArea.getElementsByClassName('shopingCartArea_box_item');
-    for(var i=0;i<cartboxes.length;i++){
-      var itemImage=cartboxes[i].getElementsByClassName('shopingCartArea_box_item_img')
-      var itemPrice=cartboxes[i].getElementsByClassName('shopingCartArea_box_item_price')
-      var itemQuantity=artboxes[i].getElementsByClassName('items_numbar_calc_num')
-    }
-}
+Plus.addEventListener('click',function(){
+
+    num.textContent=ParseNum++
+})

@@ -26,7 +26,7 @@
 #wrapper{
     background-color: black;
     position: relative;
-width: 100%;
+min-width: 100%;
 height: auto;
 background: -webkit-gradient(linear, left top, left bottom, color-stop(24.48%, rgba(133, 51, 255, 0.85)), to(rgba(96, 185, 185, 0)));
 background: -o-linear-gradient(top, rgba(133, 51, 255, 0.85) 24.48%, rgba(96, 185, 185, 0) 100%);
@@ -38,7 +38,7 @@ display: flex;
 -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
-overflow: hidden;
+/* overflow: hidden; */
 }
 
 #header{
@@ -252,7 +252,7 @@ display: inline-block;
     left: -315px;
     list-style: none;
     display: block;
-overflow: auto;
+overflow: auto;z-index: 6;
 
 }
 ul.shopingCartArea_box_buttons {
@@ -439,7 +439,7 @@ line-height: 22.5px;
     background-size: cover;
     left: 110px;
     top: 15px;
-    display: none;
+    display: block;
 }
 
 .WishlistArea_box{
@@ -452,7 +452,7 @@ line-height: 22.5px;
     top: 60px;
     list-style: none;
     line-height: 35px;
-    display: block;
+    display: none;
 }
 .WishlistArea_box h2{
 text-transform: uppercase;
@@ -1192,7 +1192,7 @@ position: relative;
 }
 
 .product_boxes_area{
-    width: 100%;
+    /* width: 100%; */
     display: inline-flex;
     justify-content: space-between;
     height: auto;
@@ -1213,6 +1213,7 @@ box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
     width: 450px;
     height: auto;
     margin: auto;
+    margin-top: 35px;
 }
 .price_filter_box{
     width: 100%;
@@ -1261,7 +1262,7 @@ margin-top: 25px;
     width: 400px;
     height: auto;
     margin: auto;
-    margin-top: 110px;
+    margin-top: 80px;
 }
 
 .brands_filter h2{
@@ -1277,7 +1278,7 @@ margin-top: 25px;
     background: rgba(255, 255, 255, 0.85);
 box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
 width: 400px;
-height: 200px;
+height: auto;
 }
 .band_list li{
     width: 100px;
@@ -1300,4 +1301,67 @@ float: right;
 background-color: red;
 margin-top: 10px;
 
+}
+
+
+.Models_filter{
+width: 400px;
+background: rgba(255, 255, 255, 0.85);
+box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+margin: auto;
+margin-top: 80px;
+margin-bottom: 70px;
+}
+.Models_filter h2{
+font-size: 25px;
+font-family: 'Poppins-Regular';
+line-height: 37.5px;
+
+}
+
+.Models_filter ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.Models_filter ul li{
+    line-height: 37px;
+    width: 100px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.Models_filter ul li label{
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.product_boxes_area_Right{
+    width: 850px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+.product_boxes_area_Right_box{
+    width: 400px;
+    height: 400px;
+    background-color: green;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    position: relative;
+}
+.product_boxes_area_Right_box_a{
+    position: relative;
+    height: 100%;
+    background-color: #000;
+}
+.product_boxes_area_Right_box_a img{
+    width
 }
