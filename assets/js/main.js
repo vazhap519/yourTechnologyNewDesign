@@ -44,23 +44,44 @@ if(TopCarousellContent && topCarousellLeftBtn && topCarousellRighttn && TopCarou
     var TopAuto=setInterval(TopCarousellAutoplay,1000)
 
 }
+/*
+=============================================================================================
+                        End TopContent Carousel
+=============================================================================================
+*/
 
-function RemoveCart(){
-    var remove=document.querySelectorAll('.shopingCartArea_box_item_cart_x');
-    for(var i=0;i< remove.length;i++){
-        var removeCartBtn=remove[i];
-        removeCartBtn.addEventListener('click',removeItem)
 
-    }
- 
-}
 var Plus=document.querySelector('.items_numbar_calc_plus');
 var Min=document.querySelector('.items_numbar_calc_min');
 var num=document.querySelector('.items_numbar_calc_num');
 var ParseNum=parseInt(num.textContent)
-console.log( typeof ParseNum)
-
+let RemoveCartItems=document.querySelectorAll('.shopingCartArea_box_item_cart_x');
+let totalElementsPrice=document.getElementsByName('shopingCartArea_box_item_price')[0];
+let items
 Plus.addEventListener('click',function(){
-
     num.textContent=ParseNum++
+    updateTotal()
 })
+Min.addEventListener('click',function(){
+    if(ParseNum<=0){
+        ParseNum=0
+    }else{
+        
+    num.textContent=ParseNum-=1
+    }
+    updateTotal()
+
+})
+
+function updateTotal(event){
+    console.log(event)
+}
+
+
+
+RemoveCartItems.forEach((remove)=>{
+remove.addEventListener("click",RemoveCartItems_F)
+})
+function RemoveCartItems_F(e){
+    let RemoveBtn=e.target.parentElement.parentElement.remove()
+}
