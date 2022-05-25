@@ -1197,14 +1197,14 @@ position: relative;
     justify-content: space-between;
     height: auto;
     border: 1px solid;
-    margin-left: 30px;
+   
     margin-top: 40px;
 }
 .product_boxes_area_left{
     width: 500px;
     max-width: 100%;
     height: auto;
-   
+    margin-left: 30px;
 background: rgba(255, 255, 255, 0.85);
 box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
 }
@@ -1337,31 +1337,48 @@ line-height: 37.5px;
 }
 
 .product_boxes_area_Right{
-    width: 850px;
+    max-width: 850px;
+    width: 100%;
     height: auto;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
-    margin-left: 50px;
+    margin-left: 25px;
     display: flex;
+    flex-direction: row;
+  }
+    
+
+
+.product_boxes_area_Right_Content{
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-
+    flex-direction: row;
+    flex-grow: 2;
+    list-style: none;
 }
-.product_boxes_area_Right_box{
-    width: 400px;
-    height: 400px;
-    background-color: green;
+.product_boxes_area_Right_Content li{
+    min-width: 400px!important;
+    height: 400px!important;
     margin-left: 15px;
-    margin-right: 15px;
     margin-top: 15px;
     position: relative;
+  
 }
-.product_boxes_area_Right_box_a{
-    position: relative;
+.product_boxes_area_Right_Content li a{
+    position: absolute;
+    width: 100%;
     height: 100%;
-    background-color: #000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.5));
 }
-.product_boxes_area_Right_box_a img{
-    width
+
+.product_boxes_area_Right_Content li a img{
+width: 335px;
+height: 300px;
+}
+.product_boxes_area_Right_Content li a .product_box_area_Right_Content_meta .product_box_area_right_Content_desc{
+    list-style: none;
 }
