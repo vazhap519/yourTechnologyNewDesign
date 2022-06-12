@@ -44,44 +44,62 @@ if(TopCarousellContent && topCarousellLeftBtn && topCarousellRighttn && TopCarou
     var TopAuto=setInterval(TopCarousellAutoplay,1000)
 
 }
+
 /*
 =============================================================================================
                         End TopContent Carousel
 =============================================================================================
 */
 
+let LoginForm=document.querySelector(".LoginAreaUl_Content_Form")
+let RegIco=document.querySelector('.LoginAreaUl_ico');
+let USerContent=document.querySelector('.LoginAreaUl_Content');
 
-var Plus=document.querySelector('.items_numbar_calc_plus');
-var Min=document.querySelector('.items_numbar_calc_min');
-var num=document.querySelector('.items_numbar_calc_num');
-var ParseNum=parseInt(num.textContent)
-let RemoveCartItems=document.querySelectorAll('.shopingCartArea_box_item_cart_x');
-let totalElementsPrice=document.getElementsByName('shopingCartArea_box_item_price')[0];
-let items
-Plus.addEventListener('click',function(){
-    num.textContent=ParseNum++
-    updateTotal()
-})
-Min.addEventListener('click',function(){
-    if(ParseNum<=0){
-        ParseNum=0
+
+
+function ShowHideUser(){
+    if(RegIco.classList.contains('LoginAreaUl_ico_Active')){
+        RegIco.classList.remove('LoginAreaUl_ico_Active')
     }else{
-        
-    num.textContent=ParseNum-=1
+        RegIco.classList.add('LoginAreaUl_ico_Active')
     }
-    updateTotal()
-
-})
-
-function updateTotal(event){
-    console.log(event)
+if(USerContent.classList.contains('LoginAreaUl_Content_Active')){
+    USerContent.classList.remove('LoginAreaUl_Content_Active')
+}else{
+    USerContent.classList.add('LoginAreaUl_Content_Active')
+}
 }
 
+let SignUp=LoginForm.querySelector('#SignUp');
+let SignIn=LoginForm.querySelector('#SignIn');
+
+let SignIn_Email=document.getElementById('email').value
+
+let SignIn_Password=document.querySelector('#password').value
+
+    
+let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+RegIco.addEventListener('click',ShowHideUser)
 
 
-RemoveCartItems.forEach((remove)=>{
-remove.addEventListener("click",RemoveCartItems_F)
-})
-function RemoveCartItems_F(e){
-    let RemoveBtn=e.target.parentElement.parentElement.remove()
+
+
+const ValidateSignInForm=(e)=>{
+e.preventDefault();
+if(SignIn_Email.length < 10){
+    console.log("სიმბოლოები 10 ნაკლებია")
+}else{
+    console.log('გააგრძელე')
 }
+}
+
+SignIn.addEventListener('click',ValidateSignInForm)
+
+
+
+
+
+
+
+
