@@ -70,28 +70,46 @@ if(USerContent.classList.contains('LoginAreaUl_Content_Active')){
 }
 }
 
-let SignUp=LoginForm.querySelector('#SignUp');
-let SignIn=LoginForm.querySelector('#SignIn');
+RegIco.addEventListener('click',ShowHideUser)
 
-let SignIn_Email=document.getElementById('email').value
 
-let SignIn_Password=document.querySelector('#password').value
+
+
+let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+let E_mail=document.querySelector('#email');
+let PassWordCheck=document.querySelector('#password')
+let Sign_in=document.querySelector('#SignIn');
+Sign_in.addEventListener('click',function(){
+ if(E_mail.value<=10){
+     alert('შეამოწმე სიმბოლოების რაოდენობა ან ძაღლუკა ')
+     filter.test(E_mail.value)
+     E_mail.style.border="3px solid red"
+     
+ }else{
+    
+     E_mail.style.border="3px solid #A889F2"
+ }
+
+ if(PassWordCheck.value<=10){
+    alert('შეამოწმე პაროლის სიგრძე და სისწორე ')
+    PassWordCheck.style.border="3px solid red"
+ }else{
+    
+    PassWordCheck.style.border="3px solid #A889F2"
+ }
+})
 
     
-let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-RegIco.addEventListener('click',ShowHideUser)
+
+
 
 
 
 
 const ValidateSignInForm=(e)=>{
 e.preventDefault();
-if(SignIn_Email.length < 10){
-    console.log("სიმბოლოები 10 ნაკლებია")
-}else{
-    console.log('გააგრძელე')
-}
+
 }
 
 SignIn.addEventListener('click',ValidateSignInForm)
