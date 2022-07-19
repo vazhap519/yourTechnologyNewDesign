@@ -98,7 +98,11 @@ Sign_in.addEventListener('click',function(){
     PassWordCheck.style.border="3px solid #A889F2"
  }
 })
-
+/*
+=============================================================================================
+                        End Login Validation
+=============================================================================================
+*/
  
 let ShopIco=document.querySelector('.shopingCart_Ul_Ico')
 let ShopContent=document.querySelector('.shopingCart_Ul_Content');
@@ -115,10 +119,44 @@ if(ShopContent.classList.contains('shopingCart_Ul_Content_Active')){
     ShopContent.classList.add('shopingCart_Ul_Content_Active')
 }
 })
+/*
+=============================================================================================
+                        End Shoping Cart Area
+=============================================================================================
+*/
 
 
 
+let Wish_ico=document.querySelector('.Favorites_Ul_Ico');
+let Wish_Content=document.querySelector(".Favorites_Ul_Content");
+Wish_ico.addEventListener('click', (e)=>{
+    e.preventDefault();
+    if (Wish_Content.classList.contains("Favorites_Ul_Content_active")){
+        Wish_Content.classList.remove("Favorites_Ul_Content_active");
 
+    }else{
+        Wish_Content.classList.add("Favorites_Ul_Content_active");
+    }
+})
+/*
+=============================================================================================
+                        End Wishlist Area
+=============================================================================================
+*/
+let seaarchArea=document.querySelector('.Search_area');
+let searchBtn=document.querySelector('.search_input_btn');
+let searchInp=document.querySelector(".search_input");
+searchBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if (searchInp.classList.contains('search_input_active')){
+        searchInp.classList.remove("search_input_active");
+        seaarchArea.style.flexDirection="row-reverse";
+    }else{
+        searchInp.classList.add("search_input_active");
+        seaarchArea.style.flexDirection="row";
+    }
+
+})
 
 
 
